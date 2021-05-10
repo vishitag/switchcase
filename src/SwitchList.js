@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Switchcases from "./Switchcases";
+import TodoList from "./TodoList";
 
 const solution = [true,false,false];
 const totalChances = 4 ;
@@ -75,14 +76,7 @@ class SwitchList extends Component {
       var isWon = this.isWon(); 
       return (
         <div className="todoListMain">
-         {/* code for todolist starts here */}
-          <div> 
-           <form onSubmit={this.addItem}>
-              <input placeholder="enter task"> </input>
-              <button type="submit">add</button>
-          </form> 
-          </div>
-         {/* code for todolist ends here */}
+         
           <div>
             total clicks: {this.getTotalCount()}<br></br>
           </div>
@@ -111,6 +105,9 @@ class SwitchList extends Component {
 
             {remainingclicks > 0 &&  isWon  ? <div style={{marginTop:20}}> success show gift image </div> : null}
             
+            {/* code for todolist starts here */}
+        
+         {/* code for todolist ends here */}
       </div>
     );
   }
